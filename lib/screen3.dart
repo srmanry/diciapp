@@ -11,7 +11,9 @@ class ViewScreen extends StatelessWidget {
     return Scaffold(
         body: ListView(
       children: const [
-        CustomAppbar(),
+        CustomAppbar(
+          showNotification: true,
+        ),
       ],
     ));
   }

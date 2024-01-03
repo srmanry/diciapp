@@ -1,10 +1,16 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:disiapp/routes/app_pages.dart';
+import 'package:disiapp/screens/login/otpscreen.dart';
+import 'package:disiapp/screens/login/register.dart';
+import 'package:disiapp/splash_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'screen3.dart';
+import 'screens/customs/otp_fild.dart';
+import 'screens/login/address.dart';
+import 'screens/login/deopdown.dart';
 
 // void main() {
 //   runApp(const MyApp());
@@ -26,15 +32,18 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      initialRoute: AppPages.INITIAL,
-      getPages: AppPages.routes,
+      // initialRoute: AppPages.INITIAL,
+      // getPages: AppPages.routes,
       theme: ThemeData(
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       //: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: ViewScreen(),
+      //home: CustomScreen(),
       //  home: const FirstScreen(),
+      //  home: SplashScreen(),
+      home: AddressScreen(),
+      //  home: const DropdownScreen(),
     );
   }
 }

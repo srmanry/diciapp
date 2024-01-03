@@ -1,5 +1,7 @@
 import 'package:disiapp/screens/customs/appbar.dart';
+import 'package:disiapp/screens/customs/custombottom.dart';
 import 'package:disiapp/screens/homescreen.dart';
+import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,10 +14,10 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: CustomAppbar(),
         backgroundColor: Color(0xFFF00815A),
         body: ListView(
           children: [
-            const CustomAppbar(),
             const SizedBox(
               height: 50,
             ),
@@ -31,7 +33,7 @@ class LoginScreen extends StatelessWidget {
                     color: Colors.white,
                   )),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -74,20 +76,11 @@ class LoginScreen extends StatelessWidget {
                                 )),
                           ),
                         ),
-                        Container(
-                            width: 300,
-                            height: 45,
-                            decoration: BoxDecoration(
-                                color: Color(0xFFF00815A),
-                                borderRadius: BorderRadius.circular(50)),
-                            child: Center(
-                              child: Text(
-                                "ও টিপি অনুরোধ",
-                                style: tabartext.copyWith(
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
+                        CustomBottom(
+                            color: bottoncolor,
+                            text: Text(
+                              "ও টিপি অনুরোধ",
+                              style: bottontext,
                             )),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 10),
@@ -97,7 +90,7 @@ class LoginScreen extends StatelessWidget {
                               Container(
                                 height: 1.5,
                                 width: 120,
-                                color: Color(0xFFF00815A),
+                                color: const Color(0xFF00815A),
                               ),
                               Padding(
                                 padding:
@@ -105,7 +98,7 @@ class LoginScreen extends StatelessWidget {
                                 child: Text(
                                   "অথবা",
                                   style: tabartext.copyWith(
-                                    color: Color(0xFFF00815A),
+                                    color: bottoncolor,
                                   ),
                                 ),
                               ),
@@ -117,87 +110,35 @@ class LoginScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
                         Container(
-                            width: 300,
-                            height: 45,
-                            decoration: BoxDecoration(
-                                color: Color(0xFFF00815A),
-                                borderRadius: BorderRadius.circular(50)),
-                            child: Center(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Icon(
-                                    Icons.g_mobiledata,
-                                    color: Colors.white,
-                                    size: 40,
-                                  ),
-                                  SizedBox(
-                                    width: 15,
-                                  ),
-                                  Text(
-                                    "গুগল ",
-                                    style: tabartext.copyWith(
-                                        fontSize: 16,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
+                          width: 300,
+                          height: 45,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1,
+                                color: bottoncolor,
                               ),
-                            )),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Container(
-                            width: 300,
-                            height: 40,
-                            decoration: BoxDecoration(
-                                color: Color(0xFFF00815A),
-                                borderRadius: BorderRadius.circular(50)),
-                            child: Center(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Icon(
-                                    Icons.facebook,
-                                    color: Colors.white,
-                                  ),
-                                  const SizedBox(
-                                    width: 15,
-                                  ),
-                                  Text(
-                                    "ফেসবুক",
-                                    style: tabartext.copyWith(
-                                        fontSize: 16,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
+                              borderRadius: BorderRadius.circular(50)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "প্রশাসনিক লগইন । ",
+                                style: bottontext.copyWith(
+                                    color: const Color(0xFF00815A),
+                                    fontWeight: FontWeight.bold),
                               ),
-                            )),
-                        SizedBox(
-                          height: 25,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "আপনি কি এডমিন ? ",
-                              style: bottontext.copyWith(
-                                  color: Color(0xFFF00815A)),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                Get.to(HomePage());
-                              },
-                              child: Text("ক্লিক করুন",
-                                  style:
-                                      bottontext.copyWith(color: Colors.red)),
-                            )
-                          ],
+                              InkWell(
+                                onTap: () {
+                                  Get.to(HomePage());
+                                },
+                                child: Text("ক্লিক করুন",
+                                    style: bottontext.copyWith(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold)),
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
