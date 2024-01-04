@@ -1,6 +1,6 @@
 import 'package:disiapp/screens/customs/appbar.dart';
 import 'package:disiapp/screens/customs/custombottom.dart';
-import 'package:disiapp/screens/customs/dropdown/customdrop.dart';
+import 'package:disiapp/screens/customs/hellodc.dart';
 import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 
@@ -17,32 +17,7 @@ class AddressScreen extends StatelessWidget {
           appBar: const CustomAppbar(),
           body: ListView(
             children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 50,
-                    ),
-                    Text(
-                      "স্বাগতম আপনাকে",
-                      style: TextStyle(fontSize: 16, color: Colors.white),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "হ্যালো ডিসিতে",
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-              ),
+              hellodctext(),
               const SizedBox(
                 height: 120,
               ),

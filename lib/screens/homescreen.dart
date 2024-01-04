@@ -68,17 +68,17 @@ class _HomePageState extends State<HomePage> {
                     style: titeltext.copyWith(color: Colors.black),
                   ),
                 )),
-            Container(
-                height: 300,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: const Image(
-                  image: AssetImage(
-                    "assets/images/chat.png",
-                  ),
-                  width: 300,
-                ))
+            // Container(
+            //     height: 300,
+            //     decoration: BoxDecoration(
+            //       borderRadius: BorderRadius.circular(10),
+            //     ),
+            //     child: const Image(
+            //       image: AssetImage(
+            //         "assets/images/chat.png",
+            //       ),
+            //       width: 300,
+            //     ))
           ],
         ),
       ),

@@ -1,5 +1,7 @@
 import 'package:disiapp/screens/customs/appbar.dart';
+import 'package:disiapp/screens/customs/checkbox.dart';
 import 'package:disiapp/screens/customs/custombottom.dart';
+import 'package:disiapp/screens/customs/hellodc.dart';
 import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 
@@ -16,32 +18,7 @@ class CustomScreen extends StatelessWidget {
           appBar: const CustomAppbar(),
           body: ListView(
             children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 50,
-                    ),
-                    Text(
-                      "স্বাগতম আপনাকে",
-                      style: TextStyle(fontSize: 16, color: Colors.white),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "হ্যালো ডিসিতে",
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-              ),
+              hellodctext(),
               const SizedBox(
                 height: 150,
               ),
@@ -61,7 +38,7 @@ class CustomScreen extends StatelessWidget {
                       height: 200,
                       width: 200,
                       decoration: BoxDecoration(
-                          color: Color(0xFF182C3A),
+                          color: const Color(0xFF182C3A),
                           border: Border.all(
                             width: 2,
                             color: bottoncolor,
@@ -96,6 +73,10 @@ class CustomScreen extends StatelessWidget {
                         style: bottontext,
                       ),
                     ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    CheckBoxwidget()
                   ],
                 ),
               )

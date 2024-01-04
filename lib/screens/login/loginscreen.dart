@@ -1,6 +1,7 @@
 import 'package:disiapp/screens/customs/appbar.dart';
 import 'package:disiapp/screens/customs/custombottom.dart';
 import 'package:disiapp/screens/homescreen.dart';
+import 'package:disiapp/screens/login/otpscreen.dart';
 import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 import 'package:flutter/material.dart';
@@ -76,12 +77,17 @@ class LoginScreen extends StatelessWidget {
                                 )),
                           ),
                         ),
-                        CustomBottom(
-                            color: bottoncolor,
-                            text: Text(
-                              "ও টিপি অনুরোধ",
-                              style: bottontext,
-                            )),
+                        InkWell(
+                          onTap: () {
+                            Get.to(const OtpScreen());
+                          },
+                          child: CustomBottom(
+                              color: bottoncolor,
+                              text: Text(
+                                "ও টিপি অনুরোধ",
+                                style: bottontext,
+                              )),
+                        ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 10),
                           child: Row(

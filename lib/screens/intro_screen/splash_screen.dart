@@ -1,5 +1,7 @@
+import 'package:disiapp/screens/intro_screen/introscreen.dart';
 import 'package:disiapp/screens/styles/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -22,8 +24,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
     // bool islogin = sharedPref.getBool("islogin") ?? false;
     Future.delayed(
-      const Duration(seconds: 5),
+      const Duration(seconds: 10),
       () {
+        Get.to(IntroScreen());
         // if (islogin) {
         //   Get.offAllNamed(Routes.FRIST_SCREEN);
         // } else {

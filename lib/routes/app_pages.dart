@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 import '../screens/homescreen.dart';
-import '../screens/loginscreen.dart';
+import '../screens/login/loginscreen.dart';
 
 part 'app_routes.dart';
 

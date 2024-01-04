@@ -1,27 +1,18 @@
-import 'package:device_preview/device_preview.dart';
-import 'package:disiapp/routes/app_pages.dart';
-import 'package:disiapp/screens/login/otpscreen.dart';
-import 'package:disiapp/screens/login/register.dart';
-import 'package:disiapp/splash_screen.dart';
-import 'package:flutter/foundation.dart';
+import 'package:disiapp/screens/intro_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'screens/intro_screen/introscreen.dart';
 
-import 'screen3.dart';
-import 'screens/customs/otp_fild.dart';
-import 'screens/login/address.dart';
-import 'screens/login/deopdown.dart';
+void main() {
+  runApp(const MyApp());
+}
 
-// void main() {
-//   runApp(const MyApp());
-// }
-
-void main() => runApp(
-      DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => const MyApp(), // Wrap your app
-      ),
-    );
+// void main() => runApp(
+//       DevicePreview(
+//         enabled: !kReleaseMode,
+//         builder: (context) => const MyApp(), // Wrap your app
+//       ),
+//     );
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -40,10 +31,13 @@ class MyApp extends StatelessWidget {
       ),
       //: const MyHomePage(title: 'Flutter Demo Home Page'),
       //home: CustomScreen(),
-      //  home: const FirstScreen(),
-      //  home: SplashScreen(),
-      home: AddressScreen(),
-      //  home: const DropdownScreen(),
+      // home: const FirstScreen(),
+      home: SplashScreen(),
+      //  home: AddressScreen(),
+      // home: const DropdownScreen(),
+      // home: ViewScreen(),
+      // home: HomePage(),
+      // home: IntroScreen(),
     );
   }
 }

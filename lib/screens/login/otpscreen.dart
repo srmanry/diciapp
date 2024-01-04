@@ -1,12 +1,11 @@
 import 'package:disiapp/screens/customs/appbar.dart';
 import 'package:disiapp/screens/customs/custombottom.dart';
 import 'package:disiapp/screens/customs/otp_fild.dart';
-import 'package:disiapp/screens/homescreen.dart';
+
 import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
+
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});
@@ -104,6 +103,7 @@ class OtpScreen extends StatelessWidget {
                         ),
                         CustomBottom(
                             color: bottoncolor,
+                            
                             text: Text(
                               "সেকেন্ড",
                               style: bottontext,

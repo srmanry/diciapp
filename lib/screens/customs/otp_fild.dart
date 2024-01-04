@@ -13,7 +13,7 @@ class CustomOtpfild extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
         border: Border.all(width: 1, color: bottoncolor),
       ),
-      child: Align(
+      child: const Align(
         alignment: Alignment.center,
         child: TextField(
           decoration: InputDecoration(border: InputBorder.none),
