@@ -84,7 +84,7 @@ class RegisterScreen extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    CheckBoxwidget()
+                    //CheckBoxwidget()
                   ],
                 ),
               )

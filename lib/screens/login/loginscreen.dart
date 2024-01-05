@@ -1,6 +1,6 @@
 import 'package:disiapp/screens/customs/appbar.dart';
 import 'package:disiapp/screens/customs/custombottom.dart';
-import 'package:disiapp/screens/homescreen.dart';
+import 'package:disiapp/screens/bodypages/homescreen.dart';
 import 'package:disiapp/screens/login/otpscreen.dart';
 import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';

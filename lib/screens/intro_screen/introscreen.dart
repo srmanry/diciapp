@@ -1,4 +1,4 @@
-import 'package:disiapp/screens/homescreen.dart';
+import 'package:disiapp/screens/bodypages/homescreen.dart';
 import 'package:disiapp/screens/intro_screen/intro/first_intro.dart';
 import 'package:disiapp/screens/intro_screen/intro/scend_intro.dart';
 import 'package:disiapp/screens/intro_screen/intro/third_intro.dart';

@@ -1,7 +1,8 @@
+import 'package:disiapp/screens/bodypages/navigation.dart';
 import 'package:disiapp/screens/customs/appbar.dart';
 import 'package:disiapp/screens/customs/custombottom.dart';
 import 'package:disiapp/screens/customs/hellodc.dart';
-import 'package:disiapp/screens/homescreen.dart';
+import 'package:disiapp/screens/bodypages/homescreen.dart';
 import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 
@@ -51,7 +52,7 @@ class NameInputScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        Get.to(HomePage());
+                        Get.to(NavigationScreen());
                       },
                       child: CustomBottom(
                         color: bottoncolor,

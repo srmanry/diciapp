@@ -66,7 +66,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                if (showSheceicon) Icon(Icons.safety_check),
+                if (showSheceicon) Icon(Icons.search),
                 if (showNotification) ...[
                   SizedBox(
                     width: 10,
