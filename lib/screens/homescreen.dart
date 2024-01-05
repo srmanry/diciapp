@@ -1,8 +1,10 @@
+import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 import 'package:flutter/material.dart';
 
 import 'customs/appbar.dart';
 import 'customs/grid.dart';
+import 'customs/intro/tabbar_screen.dart';
 import 'customs/tab.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,46 +21,52 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         body: ListView(
           children: [
-            const CustomAppbar(),
-            const SizedBox(
-              height: 10,
+            const CustomAppbar(
+              showNotification: true,
             ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: DropdownButtonFormField(
-                  focusColor: Colors.white,
-                  hint: const Text(
-                    "উপজেলা",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              child: Row(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 2, color: bottoncolor),
+                        borderRadius: BorderRadius.circular(50)),
+                    child: const Center(
+                      child: Text(""),
+                    ),
                   ),
-                  value: null,
-                  items: [
-                    DropdownMenuItem(
-                      value: "দিনাজপুর",
-                      child: TextButton(
-                          onPressed: () {},
-                          child: Text("দিনাজপুর", style: dropdowntext)),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    height: 45,
+                    width: 300,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 1, color: bottoncolor),
+                        borderRadius: BorderRadius.circular(50)),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 15),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "আপনার অভিযোগ / আবেদন ",
+                        ),
+                      ),
                     ),
-                    DropdownMenuItem(
-                      value: "রংপুর",
-                      child: TextButton(
-                          onPressed: () {},
-                          child: Text("রংপুর", style: dropdowntext)),
-                    ),
-                    DropdownMenuItem(
-                      value: "ররিশাল",
-                      child: TextButton(
-                          onPressed: () {},
-                          child: Text("ররিশাল", style: dropdowntext)),
-                    ),
-                  ],
-                  onChanged: (vel) {}),
+                  ),
+                ],
+              ),
             ),
+
             const SizedBox(
               height: 10,
             ),
-            TabBarwidget(),
-            Gridwidget(),
+            TabBarlist(),
+            // Gridwidget(),
             Card(
                 elevation: 0,
                 child: Padding(

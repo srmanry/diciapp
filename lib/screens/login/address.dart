@@ -5,9 +5,12 @@ import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class AddressScreen extends StatelessWidget {
-  const AddressScreen({super.key});
+import 'name_screen.dart';
+
+class AddressInputScreen extends StatelessWidget {
+  const AddressInputScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +50,16 @@ class AddressScreen extends StatelessWidget {
                     const SizedBox(
                       height: 30,
                     ),
-                    CustomBottom(
-                      color: bottoncolor,
-                      text: Text(
-                        "পরবর্তী",
-                        style: bottontext,
+                    InkWell(
+                      onTap: () {
+                        Get.to(const NameInputScreen());
+                      },
+                      child: CustomBottom(
+                        color: bottoncolor,
+                        text: Text(
+                          "পরবর্তী",
+                          style: bottontext,
+                        ),
                       ),
                     ),
                   ],

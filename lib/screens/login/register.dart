@@ -6,9 +6,12 @@ import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class CustomScreen extends StatelessWidget {
-  const CustomScreen({super.key});
+import 'deopdown.dart';
+
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -66,11 +69,16 @@ class CustomScreen extends StatelessWidget {
                     const SizedBox(
                       height: 30,
                     ),
-                    CustomBottom(
-                      color: bottoncolor,
-                      text: Text(
-                        "রেজিস্টার",
-                        style: bottontext,
+                    InkWell(
+                      onTap: () {
+                        Get.to(const DropdownScreen());
+                      },
+                      child: CustomBottom(
+                        color: bottoncolor,
+                        text: Text(
+                          "রেজিস্টার",
+                          style: bottontext,
+                        ),
                       ),
                     ),
                     const SizedBox(

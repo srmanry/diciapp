@@ -71,7 +71,10 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Icon(Icons.notification_add)
+                  Icon(
+                    Icons.notification_add,
+                    color: Colors.red,
+                  )
                 ]
               ],
             )

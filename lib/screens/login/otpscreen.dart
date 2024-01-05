@@ -1,11 +1,12 @@
 import 'package:disiapp/screens/customs/appbar.dart';
 import 'package:disiapp/screens/customs/custombottom.dart';
 import 'package:disiapp/screens/customs/otp_fild.dart';
+import 'package:disiapp/screens/login/register.dart';
 
 import 'package:disiapp/screens/styles/colors.dart';
 import 'package:disiapp/screens/styles/style.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});
@@ -101,13 +102,17 @@ class OtpScreen extends StatelessWidget {
                         const SizedBox(
                           height: 20,
                         ),
-                        CustomBottom(
-                            color: bottoncolor,
-                            
-                            text: Text(
-                              "সেকেন্ড",
-                              style: bottontext,
-                            )),
+                        InkWell(
+                          onTap: () {
+                            Get.to(const RegisterScreen());
+                          },
+                          child: CustomBottom(
+                              color: bottoncolor,
+                              text: Text(
+                                "সেকেন্ড",
+                                style: bottontext,
+                              )),
+                        ),
                         const SizedBox(
                           height: 10,
                         ),
